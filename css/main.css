@@ -1,48 +1,15 @@
-/* Root max width = 1200, so there's space on each side. */
-
-
-
-.box { min-height: 30px;}
-
-
-/*
-
-#box1 {background-color: orange;}
-
-#box2 {background-color: orange;}
-
-#box3 {background-color: orange;}
-
-#box4 {background-color: green;}
-
-#box5 {background-color: black; background-image: url(../img/piano-keys-1e.png); background-repeat: repeat-y;}
-
-
-*/
-
-
 .note-graphic {
 	height: 20px;
 	width: 40px;
-	background-color: #5555ee;
-	border-radius: 8px;
+	background-color: #6666ff;
+	border-radius: 8px;	
 }
-
-
-
-
-
-/* Horizontally center this within containing div. Use 3 columns? Or just margin:auto or however it's done? */
-/* Also vertically center. */
 
 .scroll-area {
 	background: red;
 	height: 495px;
-<<<<<<< HEAD
 	width: 81%;
-=======
 	width: 74.8%;
->>>>>>> parent of 2c33880... Added first version of combined page
 	max-width: 961px;
 	overflow: auto;
 	overflow-y: hidden;
@@ -51,89 +18,12 @@
 
 .scroll-content {
 	background: orange;
-	background-image: url(../img/scroll-background.png);
+	background-image: url(../img/a.png);
 	height: 480px;
 	width: 6401px;
-
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/********************/
-
-
-/* Originally from https://www.entomic.com/responsivecss/layout */
-
-
-.box { float: left; }
-#root { max-width: 1200px; margin: 0 auto; }
-
-#box1 { width: 100%; }
-#box2 { width: 100%; }
-#box3 { width: 100%; }
-#box4 { width: 0%; } 
-#box5 { width: 100%; }
-#box6 { width: 0%; }
-#box7 { width: 33%; }
-
-
-/* Laptop/Tablet (1024px) */
-@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
-	#box1 { width: 100%; }
-	#box2 { width: 100%; }
-	#box3 { width: 100%; }
-	#box4 { width: 100%; }
-	#box5 { width: 100%; }
-	#box6 { width: 100%; }
-	#box7 { width: 100%; }
-}
-
-/* Tablet Portrait (768px) */
-@media only screen and (min-width: 321px) and (max-width: 1024px) and (orientation: portrait) {
-	#box1 { width: 100%; }
-	#box2 { width: 100%; }
-	#box3 { width: 100%; }
-	#box4 { width: 100%; }
-	#box5 { width: 100%; }
-	#box6 { width: 100%; }
-	#box7 { width: 100%; }
-}
-
-/* Phone Landscape (480px) */
-@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape) {
-	#box1 { width: 100%; }
-	#box2 { width: 100%; }
-	#box3 { width: 100%; }
-	#box4 { width: 100%; }
-	#box5 { width: 100%; }
-	#box6 { width: 100%; }
-	#box7 { width: 100%; }
-}
-
-/* Phone Portrait (320px) */
-@media only screen and (max-width: 320px) {
-	#box1 { width: 100%; }
-	#box2 { width: 100%; }
-	#box3 { width: 100%; }
-	#box4 { width: 100%; }
-	#box5 { width: 100%; }
-	#box6 { width: 100%; }
-	#box7 { width: 100%; }
-}
-
-
-
-/* BTW -- HTML5 Boilerplate has media query breakpoints at min-width (not max-width) 480px, 768, and 1140px. In that order. And without a portrait-landscap distinction. */
-/* Decide which I prefer. */
 
 
 
