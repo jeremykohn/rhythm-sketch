@@ -5,7 +5,7 @@
 .box { min-height: 30px;}
 
 
-/*
+
 
 #box1 {background-color: orange;}
 
@@ -13,18 +13,22 @@
 
 #box3 {background-color: orange;}
 
-#box4 {background-color: green;}
+#box4 {background-color: green; min-width: 152px; min-height: 20px;}
 
-#box5 {background-color: black;}
+#box5 {background-color: black; background-image: url(../img/piano-keys-1e.png); background-repeat: repeat-y;}
 
-*/
+
 
 
 .note-graphic {
 	height: 20px;
 	width: 40px;
-	background-color: #5555ee;
+	background-color: #6666ff;
 	border-radius: 8px;
+
+	border: 1px solid #5555ee;
+
+	box-sizing: border-box;
 }
 
 
@@ -37,7 +41,7 @@
 .scroll-area {
 	background: red;
 	height: 495px;
-	width: 81%;
+	width: 74.8%;
 	max-width: 961px;
 	overflow: auto;
 	overflow-y: hidden;
@@ -51,7 +55,6 @@
 	width: 6401px;
 
 }
-
 
 
 
