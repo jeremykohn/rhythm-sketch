@@ -1,11 +1,22 @@
+
+.webapp {
+	margin: 50px 0px;
+}
+
+.keys-and-scroller {
+	margin: 0px auto;
+}
+
+
 .note-graphic {
 	height: 20px;
 	width: 40px;
-	background-color: #6666ff;
+	background-color: #4444ee;
 	border-radius: 8px;	
 }
 
 .scroll-area {
+
 	background: red;
 	height: 495px;
 	width: 81%;
@@ -18,7 +29,7 @@
 
 .scroll-content {
 	background: orange;
-	background-image: url(../img/a.png);
+	background-image: url(../img/scroll-background.png);
 	height: 480px;
 	width: 6401px;
 }
