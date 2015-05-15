@@ -1,0 +1,142 @@
+/* Copyright 2015 Jeremy Kohn. All rights reserved. */
+
+body, .central-flex-container {
+	background-image: linear-gradient(120deg, #155799, #159957);
+}
+
+.central-flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: flex-start;
+	align-items: flex-start;
+}
+
+.central-flex-container {
+	height: 496px;
+}
+
+.column {
+	min-height: 496px;
+}
+
+.left-column, .right-column {
+	min-width: 151px;
+	min-height: 481px;
+	position: relative;
+}
+
+.left-column {
+	background-image: url(../img/piano-keys-left.png)
+}
+
+.right-column {
+	background-image: url(../img/piano-keys-right.png);
+}	
+
+.center-column {
+	flex-grow: 2;
+	max-width: 650px;	
+}
+
+.grid-container {
+	height: 481px;
+	max-width: 961px;
+	overflow: auto;
+	overflow-y: hidden;
+	margin: 0px;
+}
+
+.scrolling-grid {
+	background-image: url(../img/grid-background.png);
+	height: 481px;
+	width: 6401px;
+	position: relative;
+}
+
+.control-panel {
+	height: auto;
+	max-width: 900px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+
+.select-a-mode {
+	margin: 0px auto;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+
+
+.key-left, .key-right {
+	position: absolute;
+}
+
+.key-white-small, .key-white-large {
+	width: 151px;
+	border: 1px solid black;
+}
+
+.key-white-small {
+	height: 31px;
+}
+
+.key-white-large {
+	height: 39px;
+}
+
+.note-graphic {
+	background: url(../img/note-graphic-gradient-background.png);
+	background-repeat: repeat-x;
+}
+
+.note-graphic {
+	height: 19px;
+	width: 39px;
+	min-width: 19px;
+	background-color: #0041c6; /* Overridden by gradient. */
+	border-radius: 5px;
+	position: absolute;
+}
+
+.control-panel {
+	margin-top: 20px;
+}
+	
+.select-a-mode input[type="button"]:focus {
+	outline: none;
+}
+
+#instructions {
+	display: none;
+	font-size: 16px;
+	font-color: #ffffff;
+	font-weight: bold;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+	.left-column, .right-column { 
+		display: none; 
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.btn {
+	  padding: 5px 10px;
+	  font-size: 12px;
+	  line-height: 1.5;
+	  border-radius: 3px;
+	}
+	
+	.central-flex-container {
+		height: 500px;
+	}
+
+	.column {
+		min-height: 500px;
+	}
+}

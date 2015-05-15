@@ -1,0 +1,80 @@
+<!-- Rhythm Sketch webapp, copyright 2015 Jeremy Kohn. All rights reserved. -->
+
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+	
+      <meta charset="utf-8">
+      <title>
+        Rhythm Sketch: Easily jot down and edit musical notes.
+      </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- CSS -->
+      
+      <!-- Bootstrap CDN CSS files -->
+      <!-- Bootstrap latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <!-- Optional Bootstrap theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+      
+      <!-- jQuery UI stylesheet -->
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+      
+      <!-- Custom styles -->
+      <link rel="stylesheet" href="css/webapp.css">
+      
+      <!-- JavaScript -->
+      
+      <!-- jQuery and jQuery UI -->
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js">
+      </script>
+      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js">
+      </script>
+      
+      <!-- Twitter Bootstrap -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+      </script>
+      
+  </head>
+  
+  <body>
+    
+    <div class="main-content">
+      <div class="central-flex-container">
+		<div class="column left-column">
+          <div class="key-left key-white-small key-number-40">
+          </div>
+              </div>
+              <div class="column center-column grid-container">
+                <div class="scrolling-grid">
+                  <!-- JS will allow user to insert note graphics here. -->
+                </div>
+              </div>
+              <div class="column right-column">
+              </div>
+          </div>
+      </div>
+      
+      <div class="control-panel">
+        
+        <div>
+          <span id="instructions">
+            Select a mode: Add, edit, or remove musical notes from the above grid.
+          </span>
+        </div>
+        
+        <div class="select-a-mode">
+          <input type="button" value="Add notes" class="add-mode btn btn-default">
+          <input type="button" value="Edit notes" class="edit-mode btn btn-default">
+          <input type="button" value="Remove notes" class="remove-mode btn btn-default">
+        </div>
+        
+        <script src="js/webapp.js">
+        </script>
+        
+      </body>
+      
+  </html>
