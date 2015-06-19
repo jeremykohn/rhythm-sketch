@@ -1,80 +1,98 @@
 <!-- Rhythm Sketch webapp, copyright 2015 Jeremy Kohn. All rights reserved. -->
-
-<!DOCTYPE html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
-  
-  <head>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			Rhythm Sketch: Easily jot down and edit musical notes.
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- CSS files -->
+
+		<!-- Bootstrap CSS, including optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" type="text/css">
+		
+		<!-- jQuery UI CSS -->
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css">
+		
+		<!-- Custom CSS files -->
+		<link rel="stylesheet" href="css/webapp.css" type="text/css">
+		
+		
+		<!-- JavaScript files -->
+		
+		<!-- Modernizr -->
+		<script src="lib/modernizr-latest.js"></script>
+
+		<!-- jQuery and jQuery UI -->
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+
+		<!-- Other jQuery plugins -->
+		<script src='lib/jquery.transit.js' type="text/javascript"></script>
+		
+		<!-- Twitter Bootstrap -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+		
+		<!-- Other JavaScript libraries -->
+		<script src='lib/timbre.dev.js' type="text/javascript"></script>
+		<script src='lib/keyboard.js' type="text/javascript"></script>
+
+		<!-- Settings & related info -->
+		<script src='js/settings.js' type="text/javascript"></script>
+		<script src='js/layout.js' type="text/javascript"></script>
+		<script src='js/scroll-animate-test.js' type="text/javascript"></script>
+
+		<!-- Custom JavaScript files -->		
+		<script src='js/scroll-animate-test.js' type="text/javascript"></script>
+		<!-- <script src='js/keyboard-test.js' type="text/javascript"></script> -->
+		<script src='js/create-piano-key-divs.js' type="text/javascript"></script>
+
+	</head>
 	
-      <meta charset="utf-8">
-      <title>
-        Rhythm Sketch: Easily jot down and edit musical notes.
-      </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-      <!-- CSS -->
-      
-      <!-- Bootstrap CDN CSS files -->
-      <!-- Bootstrap latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-      <!-- Optional Bootstrap theme -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-      
-      <!-- jQuery UI stylesheet -->
-      <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-      
-      <!-- Custom styles -->
-      <link rel="stylesheet" href="css/webapp.css">
-      
-      <!-- JavaScript -->
-      
-      <!-- jQuery and jQuery UI -->
-      <script src="https://code.jquery.com/jquery-1.11.3.min.js">
-      </script>
-      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js">
-      </script>
-      
-      <!-- Twitter Bootstrap -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
-      </script>
-      
-  </head>
-  
-  <body>
-    
-    <div class="main-content">
-      <div class="central-flex-container">
-		<div class="column left-column">
-          <div class="key-left key-white-small key-number-40">
-          </div>
-              </div>
-              <div class="column center-column grid-container">
-                <div class="scrolling-grid">
-                  <!-- JS will allow user to insert note graphics here. -->
-                </div>
-              </div>
-              <div class="column right-column">
-              </div>
-          </div>
-      </div>
-      
-      <div class="control-panel">
-        
-        <div>
-          <span id="instructions">
-            Select a mode: Add, edit, or remove musical notes from the above grid.
-          </span>
-        </div>
-        
-        <div class="select-a-mode">
-          <input type="button" value="Add notes" class="add-mode btn btn-default">
-          <input type="button" value="Edit notes" class="edit-mode btn btn-default">
-          <input type="button" value="Remove notes" class="remove-mode btn btn-default">
-        </div>
-        
-        <script src="js/webapp.js">
-        </script>
-        
-      </body>
-      
-  </html>
+	<body>
+		<div class='spacer'></div>
+		<div class="main-content">
+			<div class="central-flex-container">
+				<div id="left-piano-keys" class="column left-column">
+					<div id="piano-key-40" class="key-left key-white-small"></div>
+				</div>
+				<div id="grid-container" class="column center-column grid-container">
+					<div id="grid" class="grid">
+						<!-- JS will allow user to insert note graphics here. -->
+					</div>
+				</div>
+				<div class="column right-column"></div>
+			</div>
+		</div>
+		<div class="control-panel">
+			<div>
+				<span id="instructions">Select a mode: Add, edit, or remove musical notes from the above grid.</span>
+			</div>
+			<div class="select-a-mode">
+				<input type="button" value="Record" id="keyboard-test" class="btn btn-default">				
+				<input type="button" value="Add notes" id="add-mode" class="btn btn-default"> 
+				<input type="button" value="Edit notes" id="edit-mode" class="btn btn-default"> 
+				<input type="button" value="Remove notes" id="remove-mode" class="btn btn-default">
+				<!-- 
+				<input type="button" value="Start playing" id="start-playing" class="btn btn-default">				
+				<input type="button" value="Start scroll" id="start-scroll" class="btn btn-default"> 
+				<input type="button" value="Stop scroll" id="stop-scroll" class="btn btn-default"> 
+				<input type="button" value="Add Note Here" id="add-note-here" class="btn btn-default">
+				<input type="button" value="Pause recording" id="pause-recording" class="btn btn-default">
+				<input type="button" value="Stop recording" id="stop-recording" class="btn btn-default">
+				<input type="button" value="Rhythm entry" id="rhythm-entry" class="btn btn-default">
+				-->
+
+			</div>
+
+			<!-- Main JavaScript file -->
+			<!-- <script src="js/rhythm-sketch-module.js" type="text/javascript"></script> -->
+			<!-- <script src="js/realtime-recording.js" type="text/javascript"></script> -->
+			<script src="js/webapp.js" type="text/javascript"></script>
+		</div>
+	</body>
+	
+</html>

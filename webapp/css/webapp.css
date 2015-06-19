@@ -1,5 +1,12 @@
 /* Copyright 2015 Jeremy Kohn. All rights reserved. */
 
+
+.spacer {
+	min-height: 50px;
+}
+
+
+
 body, .central-flex-container {
 	background-image: linear-gradient(120deg, #155799, #159957);
 }
@@ -37,10 +44,6 @@ body, .central-flex-container {
 
 .center-column {
 	flex-grow: 2;
-	max-width: 650px;	
-}
-
-.grid-container {
 	height: 481px;
 	max-width: 961px;
 	overflow: auto;
@@ -48,11 +51,34 @@ body, .central-flex-container {
 	margin: 0px;
 }
 
-.scrolling-grid {
+.grid {
 	background-image: url(../img/grid-background.png);
 	height: 481px;
-	width: 6401px;
+	/* width: 6401px; */ /* For now. Resize dynamically during recording. */
+	width: 1200px;
 	position: relative;
+
+	/* 	
+	-webkit-transform:translate(50px, 50px);	
+
+	Need Mozilla prefix as well. Or un-prefixed.
+	
+	Expands scroll container.
+	With no hiding/overflow, it just scrolls more.
+
+	Need to keep expanding width of grid.
+	While scrolling.
+
+	Or use negative translate?
+	Would that work?
+	(While also expanding width of grid)
+
+	Would width of scroll container have to be 0?
+
+	Play around with this.
+	Animate translate, animate expanding width of grid.
+	*/
+
 }
 
 .control-panel {
@@ -87,6 +113,11 @@ body, .central-flex-container {
 	height: 39px;
 }
 
+.piano-key-overlay {
+	opacity: 0;
+	background-color: #555555;
+}
+
 .note-graphic {
 	background: url(../img/note-graphic-gradient-background.png);
 	background-repeat: repeat-x;
@@ -94,11 +125,9 @@ body, .central-flex-container {
 
 .note-graphic {
 	height: 19px;
-	width: 39px;
-	min-width: 19px;
-	background-color: #0041c6; /* Overridden by gradient. */
+	min-width: 1px;
 	border-radius: 5px;
-	position: absolute;
+	position: absolute !important;
 }
 
 .control-panel {
